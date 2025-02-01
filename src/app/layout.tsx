@@ -1,4 +1,11 @@
 // app/layout.tsx
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Bodoni_Moda } from "next/font/google";  // Import Bodoni Moda
@@ -23,6 +30,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body className={`${inter.className} ${bodoniModa.variable}`}> {/* Apply both Inter and Bodoni Moda */}
         <Providers>
@@ -32,5 +40,7 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
+    </ClerkProvider>
+
   );
 }

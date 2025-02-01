@@ -3,7 +3,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { IoAdd } from "react-icons/io5";
 import { CgMathMinus } from "react-icons/cg";
 import { FaCheck } from "react-icons/fa6";
-import { BreadcrumbCollapsed } from "@/components/Breadcrupm";
+
 
 
 export default function T_hirt(){
